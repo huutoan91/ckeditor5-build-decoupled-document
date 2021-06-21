@@ -52,6 +52,7 @@ import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleu
 import BlockToolbar from '@ckeditor/ckeditor5-ui/src/toolbar/block/blocktoolbar';
 import HeadingButtonsUI from '@ckeditor/ckeditor5-heading/src/headingbuttonsui';
 import ParagraphButtonUI from '@ckeditor/ckeditor5-paragraph/src/paragraphbuttonui';
+import ImageInsert from '@ckeditor/ckeditor5-image/src/imageinsert';
 // A simple plugin that extends the remove format feature to consider links.
 function RemoveFormatLinks( editor ) {
     // Extend the editor schema and mark the "linkHref" model attribute as formatting.
@@ -84,6 +85,7 @@ DecoupledEditor.builtinPlugins = [
 	ImageStyle,
 	ImageToolbar,
 	ImageUpload,
+	ImageInsert,
 	Indent,
 	IndentBlock,
 	Link,
@@ -110,6 +112,7 @@ DecoupledEditor.builtinPlugins = [
 	BlockToolbar, 
 	ParagraphButtonUI, 
 	HeadingButtonsUI,
+	
 ];
 
 // Editor configuration.
@@ -196,7 +199,6 @@ DecoupledEditor.defaultConfig = {
                     '|',
                     'link',
                     'blockQuote',
-                    'imageUpload',
                     'insertTable',
                     'mediaEmbed',
                     '|',
@@ -207,6 +209,7 @@ DecoupledEditor.defaultConfig = {
                     'horizontalLine',
                     'removeFormat',                 
                     'uploadImage',
+					'insertImage',
 					
                 ], shouldNotGroupWhenFull: true
             },
